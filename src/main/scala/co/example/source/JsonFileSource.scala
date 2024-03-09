@@ -4,19 +4,19 @@ import io.circe.Decoder
 import io.circe.parser.decode
 import org.apache.flink.streaming.api.functions.source.SourceFunction
 
-class JsonFileSource[T: Decoder](path: String) extends SourceFunction[T] {
+class JsonFileSource[T: Decoder](path: String) extends SourceFunction[T] { // parallelism set to 1
 
   @volatile private var isRunning: Boolean = true
 
   override def run(ctx: SourceFunction.SourceContext[T]): Unit = {
 
-    var reader = scala.io.Source.fromFile(path).bufferedReader()
+    val reader = scala.io.Source.fromFile(path).bufferedReader()
 
     while (isRunning) {
       reader.readLine() match {
         case null =>
           reader.close()
-          reader = scala.io.Source.fromFile(path).bufferedReader()
+          cancel()
         case line =>
           val decodedLine = decode[T](line) match {
             case Left(error)  =>
@@ -25,7 +25,7 @@ class JsonFileSource[T: Decoder](path: String) extends SourceFunction[T] {
             case Right(value) => value
           }
           ctx.collect(decodedLine)
-          Thread.sleep(1000)
+          Thread.sleep(1000) // TODO: add randomness
       }
     }
   }
