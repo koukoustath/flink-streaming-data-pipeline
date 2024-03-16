@@ -1,4 +1,4 @@
-package co.example.source.utils
+package co.example.utils
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction.SourceContext
 import org.apache.flink.streaming.api.watermark.Watermark
