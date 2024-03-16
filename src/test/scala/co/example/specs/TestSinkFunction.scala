@@ -1,4 +1,4 @@
-package co.example.utils
+package co.example.specs
 
 import org.apache.flink.api.common.JobExecutionResult
 import org.apache.flink.api.common.accumulators.ListAccumulator

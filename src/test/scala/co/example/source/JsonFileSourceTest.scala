@@ -1,7 +1,7 @@
 package co.example.source
 
 import co.example.model.UserAction
-import co.example.utils.TestSourceContext
+import co.example.specs.TestSourceContext
 import org.scalatest.{GivenWhenThen, Tag}
 import org.scalatest.funspec.AnyFunSpecLike
 import org.scalatest.matchers.should.Matchers
