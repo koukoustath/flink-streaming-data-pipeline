@@ -1,7 +1,7 @@
 package co.example.job
 
 import co.example.model.UserAction
-import co.example.utils.{TestSinkFunction, TestSourceFunction}
+import co.example.specs.{TestSinkFunction, TestSourceFunction}
 import org.apache.flink.streaming.api.functions.source.SourceFunction
 import org.scalatest.funspec.AnyFunSpecLike
 import org.scalatest.matchers.should.Matchers
