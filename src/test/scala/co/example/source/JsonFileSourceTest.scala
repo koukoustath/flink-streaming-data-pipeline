@@ -1,7 +1,7 @@
 package co.example.source
 
 import co.example.model.UserAction
-import co.example.source.utils.TestSourceContext
+import co.example.utils.TestSourceContext
 import org.scalatest.{GivenWhenThen, Tag}
 import org.scalatest.funspec.AnyFunSpecLike
 import org.scalatest.matchers.should.Matchers
@@ -22,7 +22,9 @@ class JsonFileSourceTest extends AnyFunSpecLike with Matchers with GivenWhenThen
       val testSourceContext: TestSourceContext[UserAction] = new TestSourceContext[UserAction]
       jsonFileSource.run(testSourceContext)
 
-      Then("the generated elements should be the expected ones and in the same order as in the file")
+      Then(
+        "the generated elements should be the expected ones and in the same order as in the file"
+      )
       testSourceContext.collectedElements should contain theSameElementsInOrderAs List(
         UserAction(
           "3d9a78370396df7a5844ff82e0eeb0de",
