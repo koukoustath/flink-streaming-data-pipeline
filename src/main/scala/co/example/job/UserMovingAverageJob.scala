@@ -12,7 +12,7 @@ import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 
-class UserActionMovingAverageJob(source: SourceFunction[UserAction], sink: SinkFunction[String])
+class UserMovingAverageJob(source: SourceFunction[UserAction], sink: SinkFunction[String])
   extends FlinkJob {
 
   def job(executionEnvironment: StreamExecutionEnvironment): Unit = {

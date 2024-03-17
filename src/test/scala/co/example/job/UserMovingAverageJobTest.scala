@@ -8,7 +8,7 @@ import org.scalatest.funspec.AnyFunSpecLike
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.{GivenWhenThen, Tag}
 
-class UserActionMovingAverageJobTest
+class UserMovingAverageJobTest
   extends AnyFunSpecLike
   with Matchers
   with GivenWhenThen
@@ -28,7 +28,7 @@ class UserActionMovingAverageJobTest
       val testSink: TestSinkFunction[String] = new TestSinkFunction[String]
 
       When("an instance of UserActionMovingAverageJob is created")
-      val job: UserActionMovingAverageJob = new UserActionMovingAverageJob(testSource, testSink)
+      val job: UserMovingAverageJob = new UserMovingAverageJob(testSource, testSink)
 
       And("the job is executed")
       val jobResult = job.run("test-job")
