@@ -7,8 +7,8 @@ sites, using Apache Flink
     * the generator uses a file with `JSON` events as its source
     * to decode the events, `Circe` library is used
 * The processing includes the calculation of
-    * moving average count for Users depending on the event type (`TagMovingAverage`)
-    * moving average count for Tags depending on the event type (`UserMovingAverage`)
+  * moving average count for Tags depending on the event type (`TagMovingAverage`)
+  * moving average count for Users depending on the events type (`UserMovingAverage`)
 * After the processing, the results end up in a sink specifically in a `PrintSink`
 
 ### IMPROVEMENTS:
