@@ -8,7 +8,7 @@ sites, using Apache Flink
     * to decode the events, `Circe` library is used
 * The processing includes the calculation of
     * moving average count for Users depending on the event type (`TagMovingAverage`)
-    * moving average count for Tags depending on the event type (`UserActionMovingAverage`)
+    * moving average count for Tags depending on the event type (`UserMovingAverage`)
 * After the processing, the results end up in a sink specifically in a `PrintSink`
 
 ### IMPROVEMENTS:
