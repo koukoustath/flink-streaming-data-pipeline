@@ -36,17 +36,20 @@ class TagMovingAverageJobTest
       Then("the collected output elements should be the expected ones")
       testSink.getResults(jobResult) should contain theSameElementsAs List(
         "Window {2023-10-01T06:09:05Z, 2023-10-01T06:09:15Z} - (TagId, EventType): (189708586, 1) - Number of events: 1",
-        "Window {2023-10-01T06:09:05Z, 2023-10-01T06:09:15Z} - (TagId, EventType): (71924100, 1) - Number of events: 1",
-        "Window {2023-10-01T06:09:10Z, 2023-10-01T06:09:20Z} - (TagId, EventType): (189708586, 1) - Number of events: 1",
-        "Window {2023-10-01T06:09:10Z, 2023-10-01T06:09:20Z} - (TagId, EventType): (71924100, 1) - Number of events: 1",
+        "Window {2023-10-01T06:09:10Z, 2023-10-01T06:09:20Z} - (TagId, EventType): (189708586, 1) - Number of events: 2",
+        "Window {2023-10-01T06:09:10Z, 2023-10-01T06:09:20Z} - (TagId, EventType): (71924125, 1) - Number of events: 1",
+        "Window {2023-10-01T06:09:15Z, 2023-10-01T06:09:25Z} - (TagId, EventType): (189708586, 1) - Number of events: 1",
+        "Window {2023-10-01T06:09:15Z, 2023-10-01T06:09:25Z} - (TagId, EventType): (71924125, 1) - Number of events: 1",
         "Window {2023-10-01T07:47:10Z, 2023-10-01T07:47:20Z} - (TagId, EventType): (172707124, 1) - Number of events: 1",
-        "Window {2023-10-01T07:47:10Z, 2023-10-01T07:47:20Z} - (TagId, EventType): (2776026197, 1) - Number of events: 1",
-        "Window {2023-10-01T07:47:10Z, 2023-10-01T07:47:20Z} - (TagId, EventType): (85725439, 1) - Number of events: 1",
         "Window {2023-10-01T07:47:15Z, 2023-10-01T07:47:25Z} - (TagId, EventType): (172707124, 1) - Number of events: 1",
-        "Window {2023-10-01T07:47:15Z, 2023-10-01T07:47:25Z} - (TagId, EventType): (2776026197, 1) - Number of events: 1",
-        "Window {2023-10-01T07:47:15Z, 2023-10-01T07:47:25Z} - (TagId, EventType): (85725439, 1) - Number of events: 1",
-        "Window {2023-10-01T10:01:20Z, 2023-10-01T10:01:30Z} - (TagId, EventType): (2780252810, 1) - Number of events: 1",
-        "Window {2023-10-01T10:01:25Z, 2023-10-01T10:01:35Z} - (TagId, EventType): (2780252810, 1) - Number of events: 1"
+        "Window {2023-10-01T06:09:05Z, 2023-10-01T06:09:15Z} - (TagId, EventType): (189708586, 2) - Number of events: 1",
+        "Window {2023-10-01T06:09:10Z, 2023-10-01T06:09:20Z} - (TagId, EventType): (189708586, 2) - Number of events: 1",
+        "Window {2023-10-01T10:01:20Z, 2023-10-01T10:01:30Z} - (TagId, EventType): (2780252810, 2) - Number of events: 2",
+        "Window {2023-10-01T10:01:20Z, 2023-10-01T10:01:30Z} - (TagId, EventType): (2993838110, 2) - Number of events: 1",
+        "Window {2023-10-01T10:01:20Z, 2023-10-01T10:01:30Z} - (TagId, EventType): (2779161974, 2) - Number of events: 1",
+        "Window {2023-10-01T10:01:25Z, 2023-10-01T10:01:35Z} - (TagId, EventType): (2780252810, 2) - Number of events: 2",
+        "Window {2023-10-01T10:01:25Z, 2023-10-01T10:01:35Z} - (TagId, EventType): (2993838110, 2) - Number of events: 1",
+        "Window {2023-10-01T10:01:25Z, 2023-10-01T10:01:35Z} - (TagId, EventType): (2779161974, 2) - Number of events: 1"
       )
     }
   }
