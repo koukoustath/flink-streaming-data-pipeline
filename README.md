@@ -18,7 +18,6 @@ sites, using Apache Flink
 * Use a `FileSink` as data sink to replace `PrintSink`
 * Change the sink data type from `String` to some case class, e.g. `case class Result(...)`
 * Set up a `NoSQL` solution as sink (consider time-series DB)
-* More test cases
 * Scaladoc
 * Error handling and fault tolerance
 * CI using GA
